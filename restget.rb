@@ -1,4 +1,6 @@
 # restget.rb
+# SYNTAX:  ruby restget.rb http://url_with_REST_API
+# pipe to jshon for clean JSON formatted output
 
 require 'net/http'
 
