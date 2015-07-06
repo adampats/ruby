@@ -1,0 +1,18 @@
+{
+    "Version":"2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cloudwatch:ListMetrics",
+                "cloudwatch:GetMetricStatistics",
+                "ec2:DescribeInstances",
+                "rds:DescribeDBInstances",
+                "sqs:ListQueues",
+                "elasticache:describeCacheClusters",
+                "elasticloadbalancing:DescribeLoadBalancers"
+            ],
+            "Resource": [ "*" ]
+        }
+    ]
+}
