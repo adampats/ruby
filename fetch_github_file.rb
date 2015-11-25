@@ -1,9 +1,7 @@
 # Grab a single file from github
 # Requires a token - go here: https://github.com/settings/tokens
 
-require 'json'
 require 'rest_client'
-require 'pry-byebug'
 
 # Parameters
 GH_HOST = "api.github.com"
