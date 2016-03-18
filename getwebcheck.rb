@@ -48,7 +48,8 @@ begin
     begin
       print count * intv.to_i if opts[:verbose]
       print "."
-      resp = RestClient.get(url)
+      resp = RestClient::Request.execute(
+        method: :get, url: url, verify_ssl: false )
       if resp.code == code.to_i
         print "{#{resp.code}}"
         match = true
