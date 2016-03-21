@@ -48,8 +48,8 @@ begin
     begin
       print count * intv.to_i if opts[:verbose]
       print "."
-      resp = RestClient::Request.execute(
-        method: :get, url: url, verify_ssl: false )
+      rest = RestClient::Resource.new( url,
+        headers: { accept: 'text/html' }, verify_ssl: false )
       if resp.code == code.to_i
         print "{#{resp.code}}"
         match = true
@@ -61,7 +61,6 @@ begin
   puts "\nMatch at #{Time.now}!"
 
 rescue Exception => e
-  puts "Exception."
-  puts e.message
+  puts "Exception: " + e.message
   puts e.backtrace.inspect
 end
