@@ -50,6 +50,7 @@ begin
       print "."
       rest = RestClient::Resource.new( url,
         headers: { accept: 'text/html' }, verify_ssl: false )
+      resp = rest.get
       if resp.code == code.to_i
         print "{#{resp.code}}"
         match = true
