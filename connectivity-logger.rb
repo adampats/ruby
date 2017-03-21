@@ -1,7 +1,10 @@
 #!/usr/bin/env ruby
+#
+# run in docker:
+# cmd='ruby connectivity-logger.rb -h 8.8.8.8,192.168.0.1,192.168.100.1 -t 2 -i 3 -d 36000'
+# docker run -d -v "$PWD":/usr/src/myapp -w /usr/src/myapp ruby:2.3.1-slim "$cmd"
 
 require 'optparse'
-require 'pry'
 require 'logger'
 
 ### Parameters
